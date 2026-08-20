@@ -1,0 +1,41 @@
+# Amul/Gopal crate SKU detection — Ultralytics dataset config
+# The crate is the detection object: one box per crate, classified into one of 29 SKUs.
+# Annotate a crate ONLY when its SKU is visually determinable (contents/face visible),
+# i.e. during the loading motion. Side-only stacked crates -> CVAT "ignore", not a class.
+
+path: dataset/yolo
+train: images/train
+val: images/val
+test: images/test
+
+nc: 29
+names:
+  0: amul_buffalo_milk_500ml      # Amul Buffalo Milk 24x500 ml Pouch
+  1: amul_buffalo_milk_6l         # Amul Buffalo Milk 2x6 L Pouch
+  2: amul_buttermilk_6l           # Amul Buttermilk 2x6 ltr Pouch
+  3: amul_chai_mazza_1l           # Amul Chai Mazza 12x1 L Pouch
+  4: amul_chai_mazza_500ml        # Amul Chai Mazza 24x500 ml Pouch
+  5: amul_cow_milk_500ml          # Amul Cow Milk 24x500 ml Pouch
+  6: amul_dahi_700g               # Amul Dahi Pouch 16x700 Gm Crate
+  7: amul_dahi_5kg                # Amul Dahi Pouch 2x5 Kg Crate
+  8: amul_gold_500ml              # Amul Gold 24x500 ml Pouch
+  9: amul_gold_6l                 # Amul Gold 2x6 L Pouch
+  10: amul_masti_dahi_bucket_1kg  # Amul Masti Dahi Bucket 6x1 Kg Crate
+  11: amul_masti_dahi_cup_200g    # Amul Masti Dahi Cup 28x200 Gm Crate
+  12: amul_masti_dahi_cup_80g     # Amul Masti Dahi Cup 48x80 Gm Crate
+  13: amul_masti_dahi_pouch_1kg   # Amul Masti Dahi Pouch 12x1 Kg Crate
+  14: amul_masti_dahi_pouch_5kg   # Amul Masti Dahi Pouch 2x5 Kg Crate
+  15: amul_masti_dahi_pouch_380g  # Amul Masti Dahi Pouch 30x380 Gm Crate
+  16: amul_pro_buttermilk_650ml   # Amul Pro. Buttermilk 16x650 mL Pouch
+  17: amul_pro_buttermilk_400ml   # Amul Pro. Buttermilk 30x400 mL Pouch
+  18: amul_t_special_1l           # Amul T-Special 12x1 L Pouch
+  19: amul_taaza_500ml            # Amul Taaza 24x500 ml Pouch
+  20: amul_taaza_6l               # Amul Taaza 2x6 L Pouch
+  21: amul_taaza_150ml            # Amul Taaza 60x150 ml Pouch
+  22: gopal_dahi_5kg              # Gopal Dahi Pouch 2x5 Kg Crate
+  23: gopal_dahi_400g             # Gopal Dahi Pouch 30x400 Gm Crate
+  24: gopal_buttermilk            # Gopal Butter Milk 480 mL / 300 mL (visually merged)
+  25: gopal_dahi_cup_200g         # Gopal Dahi Cup 22x200 Gm Crate
+  26: gopal_dahi_cup_100g         # Gopal Dahi Cup 48x100 Gm Crate
+  27: gopal_dahi_pouch_1kg        # Gopal Dahi Pouch 12x1 Kg Crate
+  28: gopal_sour_buttermilk_530ml # Gopal Sour Butter Milk 18x530 mL
